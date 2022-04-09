@@ -1,0 +1,3 @@
+# Uzyn-Qulaq
+
+Newspaper app.

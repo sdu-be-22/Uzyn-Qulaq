@@ -11,6 +11,7 @@
         </div>
         <div class = "card-body">
             {{ article.body }}
+            <p><a href="{% url 'article_detail' article.pk %}">SEE FULL</a></p>
         </div>
         <div class = "card-footer text-center text-muted">
             <a href="{% url 'article_edit' article.pk %}">Edit</a> | 

@@ -14,7 +14,18 @@ class ArticleListView(LoginRequiredMixin, ListView):
     model = Article
     template_name = 'article_list.html'
     login_url = 'login'
+    def get_queryset(self):
 
+        posts = []
+        for p in Article.objects.order_by('-date'):
+            if p.author in self.request.user.followings.all():
+                posts.append(p)
+        # for user in self.request.
+        # user.followings.all():
+        #     for post in Article.objects.filter(author=user).order_by('-date'):
+        #         posts.append(post)
+
+        return posts
 
 
 class ArticleDetailView(LoginRequiredMixin, DetailView):

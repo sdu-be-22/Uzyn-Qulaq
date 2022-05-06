@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block content %}
+<div>
+    <h2> {{ user.username }}</h2>
+    <p> Email: {{ user.email }} </p>
+    <p>Age: {{ user.age }}</p>
+    {% if user == request.user %}
+    <p><a href="{% url 'password_change' %}"> Change password </a></p>
+    {% endif %}
+</div>
+{% if user != request.user %}
+    {% if is_follow %}
+        <form action="{% url 'follow-user' user_id=user.id %}" method="post">
+            {% csrf_token %}
+            <input type="submit" value="Unfollow" class="btn btn-primary">
+        </form>
+    {% else %}
+        <form action="{% url 'follow-user' user_id=user.id %}" method="post">
+            {% csrf_token %}
+            <input type="submit" value="Follow" class="btn btn-primary">
+        </form>
+        
+    {% endif %}
+{% endif %}
+<br>
+<p>
+    <a class="btn btn-info" href = "{% url 'user_followers_show' user_id=user.id %}" >
+        Followers <span class="badge bg-secondary">{{ followers }}</span>
+    </a>
+    <a class="btn btn-info" href="{% url 'user_followings_show' user_id=user.id %}">
+        Followings <span class="badge bg-secondary">{{ followings }}</span>
+    </a>
+</p>
+
+{% for article in articles %}
+<br>
+{% include 'includes/article-list-include.html' %}
+{% endfor %}
+<br>
+{% endblock content %}

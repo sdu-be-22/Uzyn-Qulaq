@@ -11,6 +11,7 @@ class Article(models.Model):
     author = models.ForeignKey(
         settings.AUTH_USER_MODEL,
         on_delete = models.CASCADE,
+        related_name='articles',
     )
 
 

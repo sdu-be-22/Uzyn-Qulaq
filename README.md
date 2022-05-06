@@ -40,7 +40,7 @@ Our goal is to share rumors and gossips xD
 
 ## Team Members
 
-* Aruzhan Kapuzaevna 200103185@stu.sdu.edu.kz
+* Aruzhan Turashbayeva 200103185@stu.sdu.edu.kz
 * Abdylkhafiz Abdulkhalil 200103166@stu.sdu.edu.kz
 * Sena Yesbol 200103270@stu.sdu.edu.kz
 

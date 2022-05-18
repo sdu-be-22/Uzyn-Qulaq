@@ -3,6 +3,8 @@
 Newspaper app.
 This project about "Newspaper App', where you can find live news, investigations, opinion, weather, business, entertainment, politics, and more. Moreover, you can add users, and follow each other. 
 
+<a href="https://www.canva.com/design/DAFBDLKdESo/GYk_SwrDH-LnOJA9F6ijQw/view?utm_content=DAFBDLKdESo&utm_campaign=share_your_design&utm_medium=link&utm_source=shareyourdesignpanel"> link </a>
+
 ## Table of contents
 
 * [General Info](#general-info)
